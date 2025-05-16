@@ -7,14 +7,13 @@
 #endif
 
 extern "C" {
-    IMPORT void hello();
-    IMPORT int add(int a, int b);
+    IMPORT void OpenDoor();
+    IMPORT void CloseDoor();
 }
 
 int main() {
-    hello();
-    
-    int result = add(5, 3);
-    std::cout << "5 + 3 = " << result << std::endl;
+    OpenDoor();
+    CloseDoor();
+       
     return 0;
 }

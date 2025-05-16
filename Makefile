@@ -3,11 +3,11 @@ CC = g++
 CFLAGS = -Wall -g
 
 # Определяем имена файлов
-DLL_NAME = example.dll
+DLL_NAME = doorcontrol.dll
 EXE_NAME = main.exe
 
 # Исходные файлы
-DLL_SOURCES = example.cpp
+DLL_SOURCES = doorcontrol.cpp
 EXE_SOURCES = main.cpp
 
 # Правило по умолчанию
@@ -19,7 +19,7 @@ $(DLL_NAME): $(DLL_SOURCES)
 
 # Правило для сборки EXE
 $(EXE_NAME): $(EXE_SOURCES)
-	$(CC) $(CFLAGS) -L. -lexample -o $@ $^
+	$(CC) $(CFLAGS) -L. -l doorcontrol -o $@ $^
 
 # Правило для очистки
 clean:
