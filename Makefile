@@ -3,11 +3,11 @@ CC = g++
 CFLAGS = -Wall -g
 
 # Определяем имена файлов
-DLL_NAME = doorcontrol.dll
+DLL_NAME = PulseReader.dll
 EXE_NAME = main.exe
 
 # Исходные файлы
-DLL_SOURCES = doorcontrol.cpp
+DLL_SOURCES = PulseReader.cpp
 EXE_SOURCES = main.cpp
 
 # Правило по умолчанию
@@ -19,7 +19,7 @@ $(DLL_NAME): $(DLL_SOURCES)
 
 # Правило для сборки EXE
 $(EXE_NAME): $(EXE_SOURCES)
-	$(CC) $(CFLAGS) -L. -l doorcontrol -o $@ $^
+	$(CC) $(CFLAGS) -L. -l PulseReader -o $@ $^
 
 # Правило для очистки
 clean:
